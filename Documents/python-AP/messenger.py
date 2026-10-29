@@ -8,6 +8,10 @@ def load_server_data_from_file():
 
 server_data = load_server_data_from_file()
 
+def serialisation():
+    with open('storage.json', 'w') as f:
+        json.dump(server_data, f, indent=4)
+
 
 print('=== Messenger ===')
 print('x. Leave / y.utilisateurs/ z.groupes/ ')
