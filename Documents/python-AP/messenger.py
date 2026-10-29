@@ -32,17 +32,17 @@ elif choice == 'y':
     print(L)
 
 elif choice =='z':
-    L2=[]
-    for user in server_data['channels']:
-        L2.append(user['name'])
-    print(L2)
+    for chanel in server_data['channels']:
+        print(chanel['name'])
     groupe = input('Select a group: ')
-    for gr in L2:
-        if groupe == gr:
-            print(server_data['messages'][])
+    for gr in server_data['channels']:
+        if gr['name'] == groupe:
+            for message in server_data['messages']:
+                if message['channel'] == gr['id']:
+                    print(message['content'])
 
-
-   
+    
+ 
 else:
     print('Unknown option:', choice)
 
